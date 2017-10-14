@@ -1,4 +1,5 @@
 FROM eclipse/stack-base:debian
+ENV PATH /opt/gtk/bin:$PATH
 RUN sudo apt-get update && \
     sudo apt-get -y install ghc ghc-doc ghc-prof && \
-	curl -sSL https://get.haskellstack.org/ | sh
+	curl -sSL https://get.haskellstack.org/ | sudo sh -d /bin
